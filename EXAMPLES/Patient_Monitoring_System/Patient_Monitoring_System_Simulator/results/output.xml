@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.4 on win32)" generated="20220817 10:22:41.870" rpa="false" schemaversion="3">
+<suite id="s1" name="Test Azure UI Medical Remote" source="d:\Test_Framework\code\FAST_Remote_server\example\Test_Azure_UI_Medical_Remote.robot">
+<kw name="Connect" library="Remote" type="SETUP">
+<arg>SOCKET</arg>
+<doc>Connect to client
+`port` broker port (default 1883)
+`client_id` if not specified, a random id is generated</doc>
+<status status="PASS" starttime="20220817 10:22:42.115" endtime="20220817 10:22:42.126"/>
+</kw>
+<test id="s1-t1" name="Test_FUNCTIONAL" line="29">
+<kw name="Getwidgetdata" library="Remote">
+<var>${response}</var>
+<arg>${widget}</arg>
+<arg>${SysBloodPressureID}</arg>
+<msg timestamp="20220817 10:22:42.150" level="INFO">write Socket {"topic": "Get/radio_button_arc", "payload": "9"}</msg>
+<msg timestamp="20220817 10:22:42.150" level="INFO">${response} = {'message': 'Text is : 120', 'topic': 'log'}</msg>
+<status status="PASS" starttime="20220817 10:22:42.127" endtime="20220817 10:22:42.150"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220817 10:22:42.151" endtime="20220817 10:22:42.151"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220817 10:22:43.160" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220817 10:22:42.152" endtime="20220817 10:22:43.160"/>
+</kw>
+<kw name="Setwidgetdata" library="Remote">
+<var>${response}</var>
+<arg>${widget}</arg>
+<arg>${SysBloodPressureID}</arg>
+<arg>55</arg>
+<msg timestamp="20220817 10:22:43.209" level="INFO">write Socket {"topic": "Set/radio_button_arc", "payload": "9/55"}</msg>
+<msg timestamp="20220817 10:22:43.209" level="INFO">${response} = {'message': 'Set prompt with : 55', 'topic': 'log'}</msg>
+<status status="PASS" starttime="20220817 10:22:43.162" endtime="20220817 10:22:43.209"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220817 10:22:43.210" endtime="20220817 10:22:43.210"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220817 10:22:45.213" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220817 10:22:43.211" endtime="20220817 10:22:45.214"/>
+</kw>
+<kw name="Getwidgetdata" library="Remote">
+<var>${response}</var>
+<arg>${widget}</arg>
+<arg>${SysBloodPressureID}</arg>
+<msg timestamp="20220817 10:22:45.220" level="INFO">write Socket {"topic": "Get/radio_button_arc", "payload": "9"}</msg>
+<msg timestamp="20220817 10:22:45.220" level="INFO">${response} = {'message': 'Text is : 55', 'topic': 'log'}</msg>
+<status status="PASS" starttime="20220817 10:22:45.214" endtime="20220817 10:22:45.220"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220817 10:22:45.220" endtime="20220817 10:22:45.222"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220817 10:22:46.224" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220817 10:22:45.222" endtime="20220817 10:22:46.224"/>
+</kw>
+<kw name="Getwidgetdata" library="Remote">
+<var>${response}</var>
+<arg>${widget}</arg>
+<arg>${DiaBloodPressureID}</arg>
+<msg timestamp="20220817 10:22:46.232" level="INFO">write Socket {"topic": "Get/radio_button_arc", "payload": "10"}</msg>
+<msg timestamp="20220817 10:22:46.233" level="INFO">${response} = {'message': 'Text is : 78', 'topic': 'log'}</msg>
+<status status="PASS" starttime="20220817 10:22:46.225" endtime="20220817 10:22:46.233"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220817 10:22:46.233" endtime="20220817 10:22:46.234"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220817 10:22:47.239" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220817 10:22:46.235" endtime="20220817 10:22:47.240"/>
+</kw>
+<kw name="Setwidgetdata" library="Remote">
+<var>${response}</var>
+<arg>${widget}</arg>
+<arg>${DiaBloodPressureID}</arg>
+<arg>55</arg>
+<msg timestamp="20220817 10:22:47.289" level="INFO">write Socket {"topic": "Set/radio_button_arc", "payload": "10/55"}</msg>
+<msg timestamp="20220817 10:22:47.289" level="INFO">${response} = {'message': 'Set prompt with : 55', 'topic': 'log'}</msg>
+<status status="PASS" starttime="20220817 10:22:47.243" endtime="20220817 10:22:47.289"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220817 10:22:47.291" endtime="20220817 10:22:47.293"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220817 10:22:49.297" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220817 10:22:47.293" endtime="20220817 10:22:49.297"/>
+</kw>
+<kw name="Getwidgetdata" library="Remote">
+<var>${response}</var>
+<arg>${widget}</arg>
+<arg>${DiaBloodPressureID}</arg>
+<msg timestamp="20220817 10:22:49.304" level="INFO">write Socket {"topic": "Get/radio_button_arc", "payload": "10"}</msg>
+<msg timestamp="20220817 10:22:49.304" level="INFO">${response} = {'message': 'Text is : 55', 'topic': 'log'}</msg>
+<status status="PASS" starttime="20220817 10:22:49.297" endtime="20220817 10:22:49.304"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220817 10:22:49.305" endtime="20220817 10:22:49.306"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220817 10:22:50.319" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220817 10:22:49.307" endtime="20220817 10:22:50.319"/>
+</kw>
+<kw name="Getwidgetdata" library="Remote">
+<var>${response}</var>
+<arg>${widget}</arg>
+<arg>${PatientNameID}</arg>
+<msg timestamp="20220817 10:22:50.326" level="INFO">write Socket {"topic": "Get/radio_button_arc", "payload": "11"}</msg>
+<msg timestamp="20220817 10:22:50.326" level="INFO">${response} = {'message': 'Text is : Anderson, Fionna', 'topic': 'log'}</msg>
+<status status="PASS" starttime="20220817 10:22:50.321" endtime="20220817 10:22:50.327"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220817 10:22:50.327" endtime="20220817 10:22:50.328"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220817 10:22:51.337" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220817 10:22:50.329" endtime="20220817 10:22:51.337"/>
+</kw>
+<kw name="Getwidgetdata" library="Remote">
+<var>${response}</var>
+<arg>${widget}</arg>
+<arg>${TemperatureID}</arg>
+<msg timestamp="20220817 10:22:51.344" level="INFO">write Socket {"topic": "Get/radio_button_arc", "payload": "12"}</msg>
+<msg timestamp="20220817 10:22:51.344" level="INFO">${response} = {'message': 'Text is : 36.7', 'topic': 'log'}</msg>
+<status status="PASS" starttime="20220817 10:22:51.338" endtime="20220817 10:22:51.344"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220817 10:22:51.344" endtime="20220817 10:22:51.345"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220817 10:22:52.354" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220817 10:22:51.346" endtime="20220817 10:22:52.354"/>
+</kw>
+<kw name="Setwidgetdata" library="Remote">
+<var>${response}</var>
+<arg>${widget}</arg>
+<arg>${TemperatureID}</arg>
+<arg>55</arg>
+<msg timestamp="20220817 10:22:52.387" level="INFO">write Socket {"topic": "Set/radio_button_arc", "payload": "12/55"}</msg>
+<msg timestamp="20220817 10:22:52.388" level="INFO">${response} = {'message': 'Set prompt with : 55', 'topic': 'log'}</msg>
+<status status="PASS" starttime="20220817 10:22:52.355" endtime="20220817 10:22:52.388"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220817 10:22:52.391" endtime="20220817 10:22:52.393"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220817 10:22:54.396" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220817 10:22:52.394" endtime="20220817 10:22:54.396"/>
+</kw>
+<kw name="Getwidgetdata" library="Remote">
+<var>${response}</var>
+<arg>${widget}</arg>
+<arg>${TemperatureID}</arg>
+<msg timestamp="20220817 10:22:54.402" level="INFO">write Socket {"topic": "Get/radio_button_arc", "payload": "12"}</msg>
+<msg timestamp="20220817 10:22:54.402" level="INFO">${response} = {'message': 'Text is : 55', 'topic': 'log'}</msg>
+<status status="PASS" starttime="20220817 10:22:54.397" endtime="20220817 10:22:54.402"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220817 10:22:54.403" endtime="20220817 10:22:54.403"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220817 10:22:55.412" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220817 10:22:54.404" endtime="20220817 10:22:55.412"/>
+</kw>
+<kw name="Getwidgetdata" library="Remote">
+<var>${response}</var>
+<arg>${widget}</arg>
+<arg>${InsulineID}</arg>
+<msg timestamp="20220817 10:22:55.419" level="INFO">write Socket {"topic": "Get/radio_button_arc", "payload": "6"}</msg>
+<msg timestamp="20220817 10:22:55.419" level="INFO">${response} = {'message': 'Text is : 0.71', 'topic': 'log'}</msg>
+<status status="PASS" starttime="20220817 10:22:55.413" endtime="20220817 10:22:55.419"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220817 10:22:55.420" endtime="20220817 10:22:55.420"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220817 10:22:56.434" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220817 10:22:55.421" endtime="20220817 10:22:56.434"/>
+</kw>
+<kw name="Getwidgetdata" library="Remote">
+<var>${response}</var>
+<arg>${widget}</arg>
+<arg>${EKGID}</arg>
+<msg timestamp="20220817 10:22:56.444" level="INFO">write Socket {"topic": "Get/radio_button_arc", "payload": "7"}</msg>
+<msg timestamp="20220817 10:22:56.445" level="INFO">${response} = {'message': 'Text is : 87', 'topic': 'log'}</msg>
+<status status="PASS" starttime="20220817 10:22:56.436" endtime="20220817 10:22:56.445"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220817 10:22:56.446" endtime="20220817 10:22:56.447"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220817 10:22:57.451" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220817 10:22:56.447" endtime="20220817 10:22:57.451"/>
+</kw>
+<kw name="Getwidgetdata" library="Remote">
+<var>${response}</var>
+<arg>${widget}</arg>
+<arg>${PlsID}</arg>
+<msg timestamp="20220817 10:22:57.457" level="INFO">write Socket {"topic": "Get/radio_button_arc", "payload": "8"}</msg>
+<msg timestamp="20220817 10:22:57.458" level="INFO">${response} = {'message': 'Text is : 96', 'topic': 'log'}</msg>
+<status status="PASS" starttime="20220817 10:22:57.452" endtime="20220817 10:22:57.458"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220817 10:22:57.459" endtime="20220817 10:22:57.460"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220817 10:22:58.469" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220817 10:22:57.460" endtime="20220817 10:22:58.469"/>
+</kw>
+<status status="PASS" starttime="20220817 10:22:42.126" endtime="20220817 10:22:58.470"/>
+</test>
+<test id="s1-t2" name="TestWindowSimulator" line="76">
+<kw name="Click" library="Remote">
+<var>${response}</var>
+<arg>${widget}</arg>
+<arg>${ScheduleScreenID}</arg>
+<msg timestamp="20220817 10:22:58.477" level="INFO">write Socket {"topic": "Click/radio_button_arc", "payload": "17"}</msg>
+<msg timestamp="20220817 10:22:58.477" level="INFO">${response} = {'message': 'Successful click event sent for ID: 17', 'topic': 'log'}</msg>
+<status status="PASS" starttime="20220817 10:22:58.473" endtime="20220817 10:22:58.477"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220817 10:22:58.477" level="INFO">{'message': 'Successful click event sent for ID: 17', 'topic': 'log'}</msg>
+<status status="PASS" starttime="20220817 10:22:58.477" endtime="20220817 10:22:58.477"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220817 10:22:59.490" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220817 10:22:58.477" endtime="20220817 10:22:59.490"/>
+</kw>
+<kw name="Click" library="Remote">
+<var>${response}</var>
+<arg>${widget}</arg>
+<arg>${PatientScreenID}</arg>
+<msg timestamp="20220817 10:22:59.496" level="INFO">write Socket {"topic": "Click/radio_button_arc", "payload": "18"}</msg>
+<msg timestamp="20220817 10:22:59.497" level="INFO">${response} = {'message': 'Successful click event sent for ID: 18', 'topic': 'log'}</msg>
+<status status="PASS" starttime="20220817 10:22:59.490" endtime="20220817 10:22:59.497"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220817 10:22:59.497" level="INFO">{'message': 'Successful click event sent for ID: 18', 'topic': 'log'}</msg>
+<status status="PASS" starttime="20220817 10:22:59.497" endtime="20220817 10:22:59.498"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220817 10:23:00.514" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220817 10:22:59.498" endtime="20220817 10:23:00.514"/>
+</kw>
+<kw name="Click" library="Remote">
+<var>${response}</var>
+<arg>${widget}</arg>
+<arg>${VitalScreenID}</arg>
+<msg timestamp="20220817 10:23:00.519" level="INFO">write Socket {"topic": "Click/radio_button_arc", "payload": "16"}</msg>
+<msg timestamp="20220817 10:23:00.520" level="INFO">${response} = {'message': 'Successful click event sent for ID: 16', 'topic': 'log'}</msg>
+<status status="PASS" starttime="20220817 10:23:00.514" endtime="20220817 10:23:00.520"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220817 10:23:00.521" level="INFO">{'message': 'Successful click event sent for ID: 16', 'topic': 'log'}</msg>
+<status status="PASS" starttime="20220817 10:23:00.521" endtime="20220817 10:23:00.521"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220817 10:23:01.533" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220817 10:23:00.522" endtime="20220817 10:23:01.533"/>
+</kw>
+<status status="PASS" starttime="20220817 10:22:58.472" endtime="20220817 10:23:01.534"/>
+</test>
+<status status="PASS" starttime="20220817 10:22:41.873" endtime="20220817 10:23:01.537"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Test Azure UI Medical Remote">Test Azure UI Medical Remote</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -3,7 +3,7 @@
 Library       Remote    http://${ADDRESS}:${PORT}
   
 *** Variables ***
-${ADDRESS}    192.168.0.4
+${ADDRESS}    192.168.100.4
 ${PORT}       12345
 
 *** Variables ***
